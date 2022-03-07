@@ -17,5 +17,4 @@
 3. Пробросить параметр из mvn command line внутрь теста
 4. mvn allure:serve
 5. mvn allure:report
-6. 
 
