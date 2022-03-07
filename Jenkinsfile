@@ -11,7 +11,7 @@ pipeline {
             steps {
                 // Get some code from a GitHub repository
                 // git 'https://github.com/jglick/simple-maven-project-with-tests.git'
-                git 'https://github.com/LenaG13/SauceDem.git'
+                git 'https://github.com/LenaG13/SauceDemoJenkins.git'
 
                 // Run Maven on a Unix agent.
                 // sh "mvn -Dmaven.test.failure.ignore=true clean package"
@@ -30,5 +30,20 @@ pipeline {
                 }
             }
         }
+
+        /* stage('reports') {
+            steps {
+                script {
+                     allure([
+                             includeProperties: false,
+                             jdk: '',
+                             properties: [],
+                             reportBuildPolicy: 'ALWAYS',
+                             results: [[path: 'target/allure-results']]
+                     ])
+                }
+            }
+        } */
+
     }
 }
