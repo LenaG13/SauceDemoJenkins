@@ -24,8 +24,8 @@
                     <include name="checkProductButtonTest"/>
                     <include name="checkCartButtonTest"/>
                     <include name="checkMenuButtonTest"/>
-                    <exclude name="addRemoveProductToCartTest"/>
-                    <exclude name="addProductToCartTest"/>
+                    <include name="addRemoveProductToCartTest"/>
+                    <include name="addProductToCartTest"/>
                     <include name="removeAddedProductTest"/>
                     <include name="logoutTest"/>
                 </methods>
@@ -49,7 +49,7 @@
             </class>
             <class name="maventest.MavenTest">
                 <methods>
-                    <exclude name="mavenPropTest"/>
+                    <include name="mavenPropTest"/>
                 </methods>
             </class>
         </classes>
