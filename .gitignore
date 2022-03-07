@@ -1,0 +1,4 @@
+/.idea/
+/.allure/
+/src/test/resources/chromedriver
+/target/

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" parallel="tests" thread-count="2">
+
+    <parameter name="username" value="standard_user"/>
+    <parameter name="password" value="secret_sauce"/>
+    <parameter name="title" value="Sauce Labs Backpack"/>
+
+    <test name="C:/Users/48534/IdeaProjects/SauceDemoLab">
+        <classes>
+            <class name="saucedemotest.LoginTest">
+                <methods>
+                    <include name="validCredentialsLoginTest"/>
+                    <include name="usernamePlaceholderTest"/>
+                    <include name="passwordPlaceholderTest"/>
+                    <include name="emptyUsernameLoginTest"/>
+                    <include name="emptyPasswordLoginTest"/>
+                    <include name="invalidCredentialsLoginTest"/>
+                </methods>
+            </class>
+            <class name="saucedemotest.ProductTest">
+                <methods>
+                    <include name="checkProductElementsTest"/>
+                    <include name="checkProductButtonTest"/>
+                    <include name="checkCartButtonTest"/>
+                    <include name="checkMenuButtonTest"/>
+                    <exclude name="addRemoveProductToCartTest"/>
+                    <exclude name="addProductToCartTest"/>
+                    <include name="removeAddedProductTest"/>
+                    <include name="logoutTest"/>
+                </methods>
+            </class>
+            <class name="saucedemotest.CheckoutInfoTest">
+                <methods>
+                    <include name="firstnamePlaceholderTest"/>
+                    <include name="lastnamePlaceholderTest"/>
+                    <include name="zipcodePlaceholderTest"/>
+                </methods>
+            </class>
+            <class name="saucedemotest.CheckoutProductTest">
+                <methods>
+                    <include name="purchaseProduct"/>
+                </methods>
+            </class>
+            <class name="maventest.ExternalPropertyTest">
+                <methods>
+                    <include name="browserPropertyTest"/>
+                </methods>
+            </class>
+            <class name="maventest.MavenTest">
+                <methods>
+                    <exclude name="mavenPropTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

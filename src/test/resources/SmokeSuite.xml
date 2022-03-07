@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="SmokeSuite" parallel="tests" thread-count="2">
+
+    <!--<groups>
+        <run>
+            <include name="smoke"/>
+        </run>
+    </groups>-->
+
+    <parameter name="username" value="standard_user"/>
+    <parameter name="password" value="secret_sauce"/>
+    <parameter name="title" value="Sauce Labs Backpack"/>
+
+    <test name="Login test">
+        <classes>
+            <class name="saucedemotest.LoginTest"/>
+        </classes>
+    </test> <!-- Test -->
+    <!--<test name="Product test">
+        <classes>
+            <class name="saucedemotest.ProductTest"/>
+        </classes>
+    </test> &lt;!&ndash; Test &ndash;&gt;
+    <test name="Order test">
+        <classes>
+            <class name="saucedemotest.CheckoutInfoTest"/>
+        </classes>
+    </test> &lt;!&ndash; Test &ndash;&gt;-->
+    <test name="Рurchase test">
+        <classes>
+            <class name="saucedemotest.CheckoutProductTest"/>
+        </classes>
+    </test> <!-- Test -->
+    <test name="Maven properties test">
+        <classes>
+            <class name="maventest.ExternalPropertyTest"/>
+        </classes>
+    </test> <!-- Test -->
+
+</suite>
