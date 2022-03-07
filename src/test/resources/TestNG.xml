@@ -18,7 +18,7 @@
                     <include name="invalidCredentialsLoginTest"/>
                 </methods>
             </class>
-            <!--<class name="saucedemotest.ProductTest">
+            <class name="saucedemotest.ProductTest">
                 <methods>
                     <include name="checkProductElementsTest"/>
                     <include name="checkProductButtonTest"/>
@@ -41,7 +41,7 @@
                 <methods>
                     <include name="purchaseProduct"/>
                 </methods>
-            </class>-->
+            </class>
             <class name="maventest.ExternalPropertyTest">
                 <methods>
                     <include name="browserPropertyTest"/>
