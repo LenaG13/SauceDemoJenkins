@@ -11,10 +11,10 @@
             <class name="saucedemotest.LoginTest">
                 <methods>
                     <include name="validCredentialsLoginTest"/>
-                    <include name="usernamePlaceholderTest"/>
+                    <exclude name="usernamePlaceholderTest"/>
                     <exclude name="passwordPlaceholderTest"/>
                     <exclude name="emptyUsernameLoginTest"/>
-                    <include name="emptyPasswordLoginTest"/>
+                    <exclude name="emptyPasswordLoginTest"/>
                     <exclude name="invalidCredentialsLoginTest"/>
                 </methods>
             </class>
