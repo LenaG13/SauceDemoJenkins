@@ -13,7 +13,7 @@
                     <include name="validCredentialsLoginTest"/>
                     <include name="usernamePlaceholderTest"/>
                     <exclude name="passwordPlaceholderTest"/>
-                    <include name="emptyUsernameLoginTest"/>
+                    <exclude name="emptyUsernameLoginTest"/>
                     <include name="emptyPasswordLoginTest"/>
                     <exclude name="invalidCredentialsLoginTest"/>
                 </methods>
