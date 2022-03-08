@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="All Test Suite" parallel="tests" thread-count="2">
+<suite name="All Test Suite" parallel="tests" thread-count="3">
 
     <parameter name="username" value="standard_user"/>
     <parameter name="password" value="secret_sauce"/>
@@ -12,21 +12,21 @@
                 <methods>
                     <include name="validCredentialsLoginTest"/>
                     <include name="usernamePlaceholderTest"/>
-                    <include name="passwordPlaceholderTest"/>
+                    <exclude name="passwordPlaceholderTest"/>
                     <include name="emptyUsernameLoginTest"/>
                     <include name="emptyPasswordLoginTest"/>
-                    <include name="invalidCredentialsLoginTest"/>
+                    <exclude name="invalidCredentialsLoginTest"/>
                 </methods>
             </class>
             <class name="saucedemotest.ProductTest">
                 <methods>
                     <include name="checkProductElementsTest"/>
-                    <include name="checkProductButtonTest"/>
-                    <include name="checkCartButtonTest"/>
-                    <include name="checkMenuButtonTest"/>
+                    <exclude name="checkProductButtonTest"/>
+                    <exclude name="checkCartButtonTest"/>
+                    <exclude name="checkMenuButtonTest"/>
                     <exclude name="addRemoveProductToCartTest"/>
                     <exclude name="addProductToCartTest"/>
-                    <include name="removeAddedProductTest"/>
+                    <exclude name="removeAddedProductTest"/>
                     <include name="logoutTest"/>
                 </methods>
             </class>
