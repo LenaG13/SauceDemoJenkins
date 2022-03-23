@@ -17,7 +17,6 @@
         <selenium.version>4.1.2</selenium.version>
         <default.browser>CHROME</default.browser>
         <aspectj.version>1.9.8</aspectj.version>
-
     </properties>
 
     <dependencies>
