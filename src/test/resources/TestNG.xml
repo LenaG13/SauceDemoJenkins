@@ -44,7 +44,7 @@
             </class>
             <class name="maventest.ExternalPropertyTest">
                 <methods>
-                    <include name="browserPropertyTest"/>
+                    <exclude name="browserPropertyTest"/>
                 </methods>
             </class>
             <class name="maventest.MavenTest">
