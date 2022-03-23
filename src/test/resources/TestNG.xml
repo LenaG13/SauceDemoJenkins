@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="All Test Suite" parallel="tests" thread-count="1">
+<suite name="All Test Suite" parallel="tests" thread-count="2">
 
     <parameter name="username" value="standard_user"/>
     <parameter name="password" value="secret_sauce"/>
@@ -12,18 +12,18 @@
                 <methods>
                     <include name="validCredentialsLoginTest"/>
                     <include name="usernamePlaceholderTest"/>
-                    <exclude name="passwordPlaceholderTest"/>
-                    <exclude name="emptyUsernameLoginTest"/>
-                    <exclude name="emptyPasswordLoginTest"/>
-                    <exclude name="invalidCredentialsLoginTest"/>
+                    <include name="passwordPlaceholderTest"/>
+                    <include name="emptyUsernameLoginTest"/>
+                    <include name="emptyPasswordLoginTest"/>
+                    <include name="invalidCredentialsLoginTest"/>
                 </methods>
             </class>
             <class name="saucedemotest.ProductTest">
                 <methods>
                     <include name="checkProductElementsTest"/>
-                    <exclude name="checkProductButtonTest"/>
-                    <exclude name="checkCartButtonTest"/>
-                    <exclude name="checkMenuButtonTest"/>
+                    <include name="checkProductButtonTest"/>
+                    <include name="checkCartButtonTest"/>
+                    <include name="checkMenuButtonTest"/>
                     <exclude name="addRemoveProductToCartTest"/>
                     <exclude name="addProductToCartTest"/>
                     <exclude name="removeAddedProductTest"/>
@@ -49,7 +49,7 @@
             </class>
             <class name="maventest.MavenTest">
                 <methods>
-                    <exclude name="mavenPropTest"/>
+                    <include name="mavenPropTest"/>
                 </methods>
             </class>
         </classes>
